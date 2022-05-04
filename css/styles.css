@@ -1,0 +1,55 @@
+
+.lead-center{
+    text-align: justify;
+}
+.text{ text-align:center;}
+.oculto{display: none;}
+.visible{ display: inline;}
+
+
+.form {
+    display: flex;
+    justify-content: center;
+}
+button{ 
+background-color:rgb(15, 89, 248);
+}
+
+
+.card-title{
+  font-size:1.5rem;
+  color:rgb(0, 26, 255)
+}
+.card-text{
+font-weight: bold;
+font-size: 1rem;
+color: green;
+}
+
+/*Contacto*/
+
+.fondo-contacto{
+  background-color: rgba(151, 151, 151, 0.43);
+}
+
+
+  .button-align{
+      text-align: center;
+  }
+
+
+/*FOOTER*/
+.footer {
+    padding-top: 1rem;
+    padding-bottom: 1.5rem;
+    background-color: #141414;
+    color: #fff;
+  }
+  
+  .copyright {
+    background-color: #575454;
+  }
+  
+  .btn {
+    box-shadow: 2px 2px 5px #aaa0a0;
+  }
