@@ -257,11 +257,7 @@ function chequearCarritoEnStorage() {
 			milanesas.actualizarPrecioTotal();
 			carrito.push(milanesas);
 		}
-
 		imprimirTabla(carrito);
-     	
-
-
  }
 }
 
