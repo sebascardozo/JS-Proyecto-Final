@@ -65,19 +65,36 @@
 			<div id="carrito"></div>
 			<div id="acciones-carrito"></div>
 		 <!-- Formulario Envio pedido-->
-      <div class="container-form p-5 ">
-        <div class="row  ">
-        <div class="col">
-        <div class="form bg-info p-3">
-          <form id="formulario" class=" display-8 text-center ">
-            <input type="text" placeholder="ej:Juan Perez"required>
-            <input type="tel" placeholder="ej:15-4567-8901" required>
-            <input type="submit" value="Enviar Pedido">
-          </form>
+     <div class="container col-6 p-3 bg-info">
+      <div class="section">
+        <div class="row">
+          <div class="col-md-12">
+            <div>
+              <div class="text-center p-3">
+                <input placeholder="Ej Indiana Jones" id="nombre" type="text" class="validate">
+                <label for="nombre"><i class="bi bi-person-check-fill"></i>  Introduce tu nombre</label>
+              </div>
+            </div>
+            <div>
+              <div class="text-center">
+                <input placeholder="Ej. 15- 4567-2345" id="telefono" type="text" class="validate">
+                <label for="number"><i class="bi bi-envelope-check"></i>  Introduce tu Telefono</label>
+              </div>
+            </div>
+            
+          <div class="col-md-12 button-align p-2">
+            <button id="enviar" class="btn bg-black text-light" name="action">
+              Enviar mensaje <i class="bi bi-send"></i>
+            </button>
+          </div>
         </div>
-       </div>   
-      </div>  
-    </div>  
+        <div class="row">
+          <div class="col s12 m12">
+              <span class="text-center text-light" id="resultado"></span>
+          </div>
+        </div>      
+        </div>
+      </div>
 </main>
      <!-- Footer-->
 <footer class="footer text-center">

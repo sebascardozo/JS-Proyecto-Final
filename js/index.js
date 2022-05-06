@@ -259,24 +259,40 @@ function chequearCarritoEnStorage() {
 		}
 
 		imprimirTabla(carrito);
+     	
 
-let miFormulario = document.getElementById("formulario");
+ 
+ let nombre = document.getElementById('nombre');
+ let telefono = document.getElementById('telefono');
+ let enviar = document.getElementById('enviar');
+ let resultado = document.getElementById('resultado');
 
-miFormulario.addEventListener("submit", validarFormulario);
+ enviar.onclick=() => {
+	let datos = {
+		nombre: nombre.value,
+		carrito: carrito,
+		telefono: telefono.value,
+		userId: 1,
+	};
 
-function validarFormulario(e){
-    
-    Swal.fire({
-        position: 'top-center',
-        icon: 'success',
-        title: 'Tu pedido ha sido enviado',
-        showConfirmButton: false,
-        timer: 1500
-      })
-    e.preventDefault();
-	console.log(carrito); 
-    eliminarCarrito();
-  }
+	const options = {
+		method: 'POST',
+		body: JSON.stringify(datos),
+		headers: {
+			'Content-type': 'application/json; charset=UTF-8',
+		}}
+	fetch('https://jsonplaceholder.typicode.com/posts', options)
+		.then((response) => response.json())
+		.then((data) => {
+			resultado.innerHTML = `Tu pedido fue enviado, gracias por tu compra!!`;
+		})
+		.catch( error => {
+			resultado.innerHTML = `Hubo un error: ${error}`;
+		})
+		eliminarCarrito();
+		console.log(carrito); 
+}
+
  }
 }
 
