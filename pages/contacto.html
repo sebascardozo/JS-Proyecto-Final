@@ -43,35 +43,38 @@
     </div>
   </nav>
   <main class="fondo-contacto">
-      <div class="section ">
-        <div class="container">
-          <h2 class=" text-center text-primary p-4">Envianos tus sugerencias</h2>
-      </div>
-      <div class="container">
-        <div class="mb-3">
-          <label for="exampleFormControlInput1"  id= "nombre" class="form-label">Nombre Completo</label>
-          <input type="email" class="form-control" placeholder="sebastian@example.com">
-        </div>
-        <div class="mb-3">
-          <label for="exampleFormControlInput1" id="correo" class="form-label">Correo electrónico</label>
-          <input type="email" class="form-control" placeholder="nombre@example.com">
-        </div>
-        <div class="mb-3">
-          <label for="exampleFormControlTextarea1"  id="mensaje" class="form-label">Escribenos tus sugerencias</label>
-          <textarea class="form-control" rows="3"></textarea>
-        </div>
-            <div class="col s12 m12 button-align p-5">
-              <button id="enviar" class="btn btn-primary" name="action">
-                Enviar mensaje <i class="bi bi-envelope-check"></i>
-              </button>
+    <h1 class="text-center p-2 text-primary">Envianos tus sugerencias</h1>
+    <div class="container">
+      <div class="section">
+        <div class="row">
+          <div class="col-md-12">
+            <div>
+              <div class="text-center p-3">
+                <input placeholder="Ej Juan Perez" id="nombre" type="text" class="validate">
+                <label for="nombre"><i class="bi bi-person-check-fill"></i>  Introduce tu nombre</label>
+              </div>
             </div>
-          </div>
-          <div class="row">
-            <div class="col-12">
-                <p id="resultado" class="text-center text-danger display-6 "></p>
+            <div>
+              <div class="text-center">
+                <input placeholder="Ej. sebas@gmail.com" id="correo" type="text" class="validate">
+                <label for="nombre"><i class="bi bi-envelope-check"></i>  Introduce tu correo</label>
+              </div>
             </div>
-          </div>      
+            <div class="form-group text-center p-5">
+              <textarea placeholder="Escribe tu sugerencia aquí " id="mensaje" class="form-control" name="message" required ></textarea>
+            </div>
+          <div class="col-md-12 button-align p-2">
+            <button id="enviar" class="btn bg-info" name="action">
+              Enviar mensaje <i class="bi bi-send"></i>
+            </button>
           </div>
+        </div>
+        <div class="row">
+          <div class="col s12 m12">
+              <span id="resultado"></span>
+          </div>
+        </div>      
+        </div>
       </div>
       <div class="text-center">
         <img src="../image/sugerencias.png" class="rounded" alt="...">
