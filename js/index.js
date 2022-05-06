@@ -261,41 +261,42 @@ function chequearCarritoEnStorage() {
 		imprimirTabla(carrito);
      	
 
- 
- let nombre = document.getElementById('nombre');
- let telefono = document.getElementById('telefono');
- let enviar = document.getElementById('enviar');
- let resultado = document.getElementById('resultado');
-
- enviar.onclick=() => {
-	let datos = {
-		nombre: nombre.value,
-		carrito: carrito,
-		telefono: telefono.value,
-		userId: 1,
-	};
-
-	const options = {
-		method: 'POST',
-		body: JSON.stringify(datos),
-		headers: {
-			'Content-type': 'application/json; charset=UTF-8',
-		}}
-	fetch('https://jsonplaceholder.typicode.com/posts', options)
-		.then((response) => response.json())
-		.then((data) => {
-			resultado.innerHTML = `Tu pedido fue enviado, gracias por tu compra!!`;
-		})
-		.catch( error => {
-			resultado.innerHTML = `Hubo un error: ${error}`;
-		})
-		eliminarCarrito();
-		console.log(carrito); 
-}
 
  }
 }
 
+
+ 
+let nombre = document.getElementById('nombre');
+let telefono = document.getElementById('telefono');
+let enviar = document.getElementById('enviar');
+let resultado = document.getElementById('resultado');
+
+enviar.onclick=() => {
+   let datos = {
+	   nombre: nombre.value,
+	   telefono: telefono.value,
+	   carrito: carrito,
+	   userId: 2,
+   };
+
+   const options = {
+	   method: 'POST',
+	   body: JSON.stringify(datos),
+	   headers: {
+		   'Content-type': 'application/json; charset=UTF-8',
+	   }}
+   fetch('https://jsonplaceholder.typicode.com/posts', options)
+	   .then((response) => response.json())
+	   .then((data) => {
+		   resultado.innerHTML = `Tu pedido fue enviado, gracias por tu compra!!`;
+	   })
+	   .catch( error => {
+		   resultado.innerHTML = `Hubo un error: ${error}`;
+	   })
+	   eliminarCarrito();
+	   console.log(carrito); 
+}
 // --- Invocación de funciones ---
 imprimirProductosEnHTML(milanesas);
 
