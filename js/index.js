@@ -14,6 +14,70 @@ Swal.fire({
     } 
 });
 
+// texto desplegable
+const muestra = ()=>{
+    let elemento= document.getElementById('adicional');
+    elemento.className= 'visible';
+
+    let ocultar =document.getElementById('ocultar');
+    ocultar.className= 'visible';
+
+    let enlace = document.getElementById('enlace');
+    enlace.className= 'oculto';
+}
+const oculta = ()=>{
+
+    document.getElementById('adicional').className= 'oculto';
+    document.getElementById('ocultar').className= 'oculto';
+    document.getElementById('enlace').className= 'visible';
+   
+}
+//NOSOTROS
+let data_result = document.getElementById('data_result');
+let data_example = document.getElementById('data_example');
+let show_data = document.getElementById('show_data');
+
+setTimeout( show_data.onclick = ()=>{
+        getData().then((response) =>{
+            loader.className = 'loader-hide';
+            response.forEach(element => {
+                const {nombre,descripcion,imagen} = element;
+                let div = document.createElement('div');
+                let card = document.createElement('div');
+                div.className = 'col';
+                card.className = 'card';
+                card.innerHTML=`<div class="card-image">
+                                    <img src="${imagen}">
+                                </div>
+								<p class="badge bg-primary text-wrap">${nombre}</p>
+                                <div class="card-content">
+                                    <p class=" text-center fw-bold">${descripcion}</p>
+                                </div>`;
+                div.append(card);
+                data_result.append(div);
+            });
+        });
+
+}
+,6000);
+
+
+const getData = ()=>{
+    let loader = document.getElementById('loader');
+    data_example.innerHTML = '';
+    loader.className = 'loader-show';
+    return new Promise((resolve,reject)=>{
+        fetch('/nosotros.json')
+        .then(response => response.json())
+        .then(data => {
+            resolve(data);
+        })
+        .catch(error => {
+            reject(error);
+        })
+    }
+    );
+}
 
 // Versión con uso de Storage
 class Menu {
@@ -37,24 +101,7 @@ class Menu {
 		this.precioTotal = this.precio * this.cantidad;
 	}
 }
-// texto desplegable
-const muestra = ()=>{
-    let elemento= document.getElementById('adicional');
-    elemento.className= 'visible';
 
-    let ocultar =document.getElementById('ocultar');
-    ocultar.className= 'visible';
-
-    let enlace = document.getElementById('enlace');
-    enlace.className= 'oculto';
-}
-const oculta = ()=>{
-
-    document.getElementById('adicional').className= 'oculto';
-    document.getElementById('ocultar').className= 'oculto';
-    document.getElementById('enlace').className= 'visible';
-   
-}
 
 
 // Constantes y variables

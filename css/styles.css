@@ -6,6 +6,12 @@
 .oculto{display: none;}
 .visible{ display: inline;}
 
+.loader-hide{
+  display: none;
+}
+.loader-show{
+  display: block;
+}
 
 .form {
     display: flex;
@@ -53,3 +59,6 @@ color: green;
   .btn {
     box-shadow: 2px 2px 5px #aaa0a0;
   }
+
+
+  

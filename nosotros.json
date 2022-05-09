@@ -1,0 +1,38 @@
+
+ [
+	{
+	
+	  "nombre": "Juan Perez",
+	  "descripcion": "Cocinero",
+	  "imagen": "/image/integranteuno.png",
+	  "id": 0
+	},
+	{
+	
+		"nombre": "Maria Lopez",
+		"descripcion": "Cocinera",
+		"imagen": "/image/integrantedos.png",
+		"id": 1
+	  },
+	  {
+	
+		"nombre": "Eugenia Gonzalez",
+		"descripcion": "Recepcionista",
+		"imagen": "/image/integrantetres.png",
+		"id": 2
+	  },
+	  {
+	
+		"nombre": "Mario Ortiz",
+		"descripcion": "Jefe de Cocina",
+		"imagen": "/image/integrantecuatro.png",
+		"id": 3
+	  },
+	  {
+	
+		"nombre": "Julieta Fernandez",
+		"descripcion": "Supervisora de compras",
+		"imagen": "/image/integrantecinco.png",
+		"id": 4
+	  }
+  ]
