@@ -36,8 +36,7 @@ const oculta = ()=>{
 let data_result = document.getElementById('data_result');
 let data_example = document.getElementById('data_example');
 let show_data = document.getElementById('show_data');
-
-setTimeout( show_data.onclick = ()=>{
+ show_data.onclick = ()=>{
         getData().then((response) =>{
             loader.className = 'loader-hide';
             response.forEach(element => {
@@ -59,7 +58,7 @@ setTimeout( show_data.onclick = ()=>{
         });
 
 }
-,6000);
+
 
 
 const getData = ()=>{
